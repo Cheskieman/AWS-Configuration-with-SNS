@@ -10,8 +10,13 @@
 
 #### Instructions on How to............
 * Create a new EC2 Instance (https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/Launch%20and%20Instance%20Name%20,%20Application%20OS%20AMI%20Setup.png?raw=true) (https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/Launch%20An%20Instance%20Instance%20type%20Key%20Pair%20Network%20Settings.png?raw=true)(https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/Launch%20and%20Instance%20Select%20Launch%20Instance.png?raw=true) 
-* In AWS Config setup> Select Specific resources type option > Select Resource Type AWS EC2 Instance and Frequencey Type Continuous> Select under Data governance Create AWS Config service Linked Role> Under Delivery channel Select Create a Bucket> Select Chrckbox for Amazon SNS topic and select Create a Topic
+* In AWS Config setup> Select Specific resources type option ! [image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20CONFIG%20RECORDING%20Setting%20PAGE.png?raw=true) Select Resource Type AWS EC2 Instance and Frequencey Type Continuous! [image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20Configuration%20Data%20Governace%20.png?raw=true)> Select under Data governance[image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20Configuration%20Data%20Governace%20.png?raw=true) Create AWS Config service Linked Role> Under Delivery channel Select Create a Bucket> Select checkbox for Amazon SNS topic and select Create a Topic! [image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20CONFIG%20DELIVERY%20ADDRESS%20AND%20SNS%20SETTING%20PAGE.png?raw=true)
+* In AWS Config Rules Page> Find Rules Searchbox type vpc-default-security-group-closed and select it as a checkbox! [image alt]()
+* 
 
+! [image alt](image url)
+! [image alt](image url)
+! [image alt](image url)
 ##### Contribution Policy
 
 This project is not accepting external contributions, including pull requests or feature requests.
