@@ -7,7 +7,7 @@
 * Set up with AWS config to record any changes to the newly created EC2 instance
 * Set up an SNS text notification to receive a text if and when an EC2 instance change takes place
 * Have preinstalled rules in place to configure in proactive measure specific security actions to come into effect for changes that take place to my EC2 instance(?)
-  ![image alt](imageurl)
+
 #### Instructions on How to............
 * Create a new EC2 Instance
 >Create the Instance Name OS & AMI![image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/Launch%20and%20Instance%20Name%20,%20Application%20OS%20AMI%20Setup.png?raw=true)
