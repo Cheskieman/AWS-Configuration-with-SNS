@@ -18,7 +18,7 @@
  >  Select Resource Type AWS EC2 Instance and Frequencey Type Continuous![image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20Configuration%20Data%20Governace%20.png?raw=true)
  > Select under Data governance![image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20Configuration%20Data%20Governace%20.png?raw=true) >Create AWS Config service Linked Role
 > Under Delivery channel>Select Create a Bucket> Select checkbox for Amazon SNS topic and select Create a Topic![image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20CONFIG%20DELIVERY%20ADDRESS%20AND%20SNS%20SETTING%20PAGE.png?raw=true)
-* In AWS Config Rules Page> Find Rules Searchbox type vpc-default-security-group-closed and select it as a checkbox![image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20Config%20Rules%20Page.png?raw=true)> 
+* In AWS Config Rules Page> Find Rules Searchbox type vpc-default-security-group-closed and select it as a checkbox![image alt](image url)
 * Confirm the setup of Amazon Config![image alt](https://github.com/Cheskieman/AWS-Configuration-with-SNS/blob/main/AWS%20Config%20Review%20Confirm%20.png?raw=true)
 
 I will document the photos and the materiel related to the SNS at a later date.
