@@ -1,6 +1,6 @@
 # Set up AWS Configuration with SNS text to be notified about any security changes to AWS Configuration.
 
-## Fully Step-by-Step guide with snapshots to describe and illustrate how AWS Config is set up with SNS text notifications.
+## Full Step-by-Step guide with snapshots to describe and illustrate how AWS Config is set up with SNS text notifications.
 
 ### This project will display how AWS Config is set up and how to have SNS notifications via text message get sent when an AWS Config rule is triggered.  In this project, we will be covering how to:
 * Configure AWS Config with preinstalled rules to record all changes and to proactively enforce security actions on newly created EC2 instances
