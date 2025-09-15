@@ -17,11 +17,10 @@ Create IAM Role to attach the remediation in AWS Config:
 * Select Roles>Create Role> Select "Systems Manager" Use case and click Next> Search for and select the policy name that I gave in the previous step and click Next> Give your Role a name and click Create Role.
 * Click on the role that you just created and copy your ARN that is located in the summary. (We are going to need the ARN to setup a future part.)
 
+![IAM CreatePolicy Photo](resources/IAMCreatePolicyphoto.png)
 
 
-   [<img src="resources/YOUR FILE NAME.png" alt="Describe the image" width="400">](resources/YOUR FILE NAME.png)
-[`/resources/YOUR FILE NAME.png`](resources/YOUR FILE NAME.png)
-
+  
 
   For AWS Config setup:
 * Select AWS Config(in the top search box AWS)> Select Rules from the options> From the Specify rule type page type security group in the AWS Managed Rules search box and select the option that begins with Decription = Checks if security groups restrict incoming traffic to restricted ports............. Select the option that appears and click Next.
