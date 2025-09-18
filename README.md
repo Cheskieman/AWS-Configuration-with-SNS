@@ -35,18 +35,37 @@ Create IAM Role to attach the remediation in AWS Config:
   ![Search for specfic rule](resources/AWS Config Rules Page.png)
   ![Another photo](resources/photo2.png)
   ![Another photo](resources/photo2.png)
-
+![Set the appropriate delivery channel and SNS settings to work with AWS Config.](resources/AWS CONFIG DELIVERY ADDRESS AND SNS SETTING PAGE.png)
+![Set Recording Method and Frequency AWS Config](resources/AWS CONFIG RECORDING Setting PAGE.png)
+![Click Confirm AWS Config setup.](resources/AWS Config Review Confirm .png)
+![AWS Config Rules & Related Settings Page](resources/AWS Config Rules Page.png)
+![AWS Config Select Manage Remediation](resources/AWS Config Select Manage Remediation Photo.png)
+![AWS Config Specify Rule Type Page & Select AWS Managed Rule](resources/AWS Config confirmation Rules Page actual one.png)
+![AWS Config Data Governance ](resources/AWS Configuration Data Governace .png)
+![AWS Config Default & Overiding Settings for Recording Events](resources/AWSCONFIGURATIONPROJECTdefaultand overiding settings.png)
+![AWS Config Manage Remediation Edit Remediation Actions](resources/AWSConfigurationSelectRemediationmethodandremediationactiondetailsphoto.png)
+![AWS Config (?)](resources/AWSCongfigurationRulesEditRuleFrequencyPage.png)
+![Another photo](resources/photo2.png)
+![Another photo](resources/photo2.png)
+![Another photo](resources/photo2.png)
 Create the Security Groups for the AWS Configurations
 
 *Select EC2 (in the top searchbox AWS) Select Security Group from left options followed by selecting Create Security Group Tab> On the Create Security Groups Page give your Security Group a name and a Description under  in the "Basic Details Box">  Create 2 rules in the Inbound rules box> Rule 1) Select SSH under type and Anywhere IPV4 under Source  Rule 2) Select All Traffic under type and Anywhere IPV4 under Source then select Create Security Group on the bottom 
-
+![EC2 Create Security Groups Give Your Security Group a Name](resources/SecurityGroupcreatesecuritygroupbasicdetailsphoto.pngresources/SecurityGroupcreatesecuritygroupbasicdetailsphoto.png)
+![EC2 Create Security Group Set Up Security Group Rules and Select Create Security Group Tab](resources/SecurityGroupcreatesecurityinboundruleandCREATESECURITYGROUPBUTOONphoto.png)
+![Another photo](resources/photo2.png)
+![Another photo](resources/photo2.png)
+![Another photo](resources/photo2.png)
 
 Create an SNS email to receive an email notification when the above rule(s) are triggered:
 
 * Select SNS(in the top search box)
 * Select Topic from the options> On the Create Topic page Select Standard and give your topic a name in the "Details" Section, then select Create topic at the bottom.
 * Navigate to Subscriptions > Create Subscription. In the Create Subscription form, select the previously created Topic ARN from the dropdown, choose Email as the protocol, enter the desired notification email address in the Endpoint field, and click Create Subscription.
-
+![SNS Select Create Subscription](resources/SNSCreateSubscriptionSelectphoto.png)
+![SNS Create Subscription Page Choose Topic ARN, Endpoint and Select Create Subscription Tab](resources/SNSCreateSubscriptioninfopage.png)
+![SNS Select Create Topic Tab](resources/SNSSelecttopicandcreatetopic.png)
+![Another photo](resources/photo2.png)
 ##### Contribution Policy
 
 This project is not accepting external contributions, including pull requests or feature requests.
