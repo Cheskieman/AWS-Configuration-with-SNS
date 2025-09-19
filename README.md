@@ -24,17 +24,15 @@ Create IAM Role to attach the remediation in AWS Config:
 ![Select Use Case Screen for Role.](resources/ROLESSelectUseCaseandNextbuttonphoto.png)
   ![Add permissions for Role](resources/ROLESAddpermissions.png)
   ![Click Create Role Button Photo](resources/ROLECreaterolephoto.png)
-  ![Another photo](resources/photo2.png)
-  ![Copy the ARN for future use](resources/SelectActualARNphoto.png)
 
+  ![Copy the ARN for future use](resources/SelectActualARNphoto.png)
+  ![Another photo](resources/photo2.png)
   For AWS Config setup:
 * Select AWS Config(in the top search box AWS)> Select Rules from the options> From the Specify rule type page type security group in the AWS Managed Rules search box and select the option that begins with Decription = Checks if security groups restrict incoming traffic to restricted ports............. Select the option that appears and click Next.
 *  In the Configure Rules Page, change the Frequency Under "Evaluation Mode" to 1 hour and click Next> Click on Save on the Review and Create Page.
 *  Go back to the Rules Page and select the Rule that You Just Created> Click the Actions Button in the top Right Corner and select Manage Remediation
 *  On the Manage Remediation Page, Select Automatic Remediation under "Select Remediation Method." Select AWS-DisablePublicAccessForSecurityGroup under "Remediation Action Details." Select Group ID from the "Resource ID parameter"> Paste the ARN (Copied from Earlier) in the box to the right of "AutomationAssumeRole", then click Save Changes.
   ![Search for specfic rule](resources/AWS Config Rules Page.png)
-  ![Another photo](resources/photo2.png)
-  ![Another photo](resources/photo2.png)
 ![Set the appropriate delivery channel and SNS settings to work with AWS Config.](resources/AWS CONFIG DELIVERY ADDRESS AND SNS SETTING PAGE.png)
 ![Set Recording Method and Frequency AWS Config](resources/AWS CONFIG RECORDING Setting PAGE.png)
 ![Click Confirm AWS Config setup.](resources/AWS Config Review Confirm .png)
