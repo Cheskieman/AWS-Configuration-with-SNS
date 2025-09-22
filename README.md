@@ -7,7 +7,7 @@
 * Set up an SNS email notification to receive an email if and when an EC2 instance change takes place
   
 
-#### Instructions on how to both Detect and Remediate a Security Group that meets Non-Compliant criteria via rules set up in AWS Config
+#### Instructions on how to  Remediate a Security Group that meets Non-Compliant criteria via rules set up in AWS Config
 
 
 Create IAM Role to attach the remediation in AWS Config:
@@ -16,36 +16,46 @@ Create IAM Role to attach the remediation in AWS Config:
 * Click on the JSON tab in the policy editor>Insert the code I illustrated( in above photos)  and click Next>Give your policy a name and Click Create Policy
 * Select Roles>Create Role> Select "Systems Manager" Use case and click Next> Search for and select the policy name that I gave in the previous step and click Next> Give your Role a name and click Create Role.
 * Click on the role that you just created and copy your ARN that is located in the summary. (We are going to need the ARN to setup a future part.)
-
+  ![Search IAM Searchbox](resources/IAMSearchIAM.png)
+  ![Select Policies Options](resources/IAMClickonpolociesoptionphoto.png)
 ![IAM Create Policy Photo](resources/IAMCreatePolicyphoto.png)
+ ![Click JSON Tab option](resources/IAM SelectJSONTab.png)
 ![Writing the JSON Policy.](resources/JSONpolicycodephoto.png)
 ![Click Next After Creating JSON policy-editor photo](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png)
 ![Create Policy Final Photo ](resources/IAMCreatePolicyphoto.png)
+![Selecty Roles from options](resources/ROLESSELECTROLESOPTIONS.png)
+![Click on Create Role (resources/ROLECREATEROLEINITIAL.png)
 ![Select Use Case Screen for Role.](resources/ROLESSelectUseCaseandNextbuttonphoto.png)
   ![Add permissions for Role](resources/ROLESAddpermissions.png)
+  ![Give Your Role a NAme.](resources/ROLEROLENAME.png)
   ![Click Create Role Button Photo](resources/ROLECreaterolephoto.png)
+![Copy the ARN for future use](resources/SelectActualARNphoto.png)
 
-  ![Copy the ARN for future use](resources/SelectActualARNphoto.png)
-  ![Another photo](resources/photo2.png)
+ 
+        
   For AWS Config setup:
-* Select AWS Config(in the top search box AWS)> Select Rules from the options> From the Specify rule type page type security group in the AWS Managed Rules search box and select the option that begins with Decription = Checks if security groups restrict incoming traffic to restricted ports............. Select the option that appears and click Next.
-*  In the Configure Rules Page, change the Frequency Under "Evaluation Mode" to 1 hour and click Next> Click on Save on the Review and Create Page.
+* Select AWS Config(in the top search box AWS)> Select Rules from the options> From the Specify rule type page type security group in the AWS Managed Rules search box and select the option that begins with Decription = Checks if security groups restrict incoming traffic to restricted ports............. Select the option that appears and click Next.> Set Frequencey to 1 hour in Evaluation Mode.Click Next Near bottom.
 *  Go back to the Rules Page and select the Rule that You Just Created> Click the Actions Button in the top Right Corner and select Manage Remediation
 *  On the Manage Remediation Page, Select Automatic Remediation under "Select Remediation Method." Select AWS-DisablePublicAccessForSecurityGroup under "Remediation Action Details." Select Group ID from the "Resource ID parameter"> Paste the ARN (Copied from Earlier) in the box to the right of "AutomationAssumeRole", then click Save Changes.
-  ![Search for specfic rule](resources/AWS Config Rules Page.png)
-![Set the appropriate delivery channel and SNS settings to work with AWS Config.](resources/AWS CONFIG DELIVERY ADDRESS AND SNS SETTING PAGE.png)
-![Set Recording Method and Frequency AWS Config](resources/AWS CONFIG RECORDING Setting PAGE.png)
-![Click Confirm AWS Config setup.](resources/AWS Config Review Confirm .png)
-![AWS Config Rules & Related Settings Page](resources/AWS Config Rules Page.png)
-![AWS Config Select Manage Remediation](resources/AWS Config Select Manage Remediation Photo.png)
+
+![Type AWS Config Searchbox](resources/AWSCONFIGSEARCH.png)
+![Another photo](resources/photo2.png)
+![Search for specific rule](resources/AWS Config confirmation Rules Page actual one.png)
 ![AWS Config Specify Rule Type Page & Select AWS Managed Rule](resources/AWS Config confirmation Rules Page actual one.png)
-![AWS Config Data Governance ](resources/AWS Configuration Data Governace .png)
-![AWS Config Default & Overiding Settings for Recording Events](resources/AWSCONFIGURATIONPROJECTdefaultand overiding settings.png)
-![AWS Config Manage Remediation Edit Remediation Actions](resources/AWSConfigurationSelectRemediationmethodandremediationactiondetailsphoto.png)
-![AWS Config (?)](resources/AWSCongfigurationRulesEditRuleFrequencyPage.png)
-![Another photo](resources/photo2.png)
-![Another photo](resources/photo2.png)
-![Another photo](resources/photo2.png)
+![Set Recording Method and Frequency AWS Config](resources/AWS CONFIG RECORDING Setting PAGE.png)
+![Change Frequencey Recording Mode to 1 hour](resources/AWSCongfigurationRulesEditRuleFrequencyPage.png)
+![Click Next Bottom of Page](resources/AWSConfigConfigrulenext.png)
+![Click Save at bottom of Next Page](resources/AWSCONFIGeview and createsave.png)
+![AWS Config Select Manage Remediation](resources/AWS Config Select Manage Remediation Photo.png)
+![Select Proper Remediation Method & Action Details](resources/AWSConfigurationSelectRemediationmethodand remediationactiondetailsphoto.png)
+![SelectResource ID parameter](resources/ManageRemediationResourceID parameter.png)
+![Select Copied ARN into Parmeters](resources/ManageRemediationBacktopagepasteinparameterARNphoto.png)
+
+
+
+
+
+
 Create the Security Groups for the AWS Configurations
 
 *Select EC2 (in the top searchbox AWS) Select Security Group from left options followed by selecting Create Security Group Tab> On the Create Security Groups Page give your Security Group a name and a Description under  in the "Basic Details Box">  Create 2 rules in the Inbound rules box> Rule 1) Select SSH under type and Anywhere IPV4 under Source  Rule 2) Select All Traffic under type and Anywhere IPV4 under Source then select Create Security Group on the bottom 
