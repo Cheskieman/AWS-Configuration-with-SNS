@@ -7,7 +7,7 @@
 * Set up an SNS email notification to receive an email if and when an EC2 instance change takes place
   
 
-#### Instructions on how to  Remediate a Security Group that meets Non-Compliant criteria via rules set up in AWS Config
+#### Instructions on how to Remediate a Security Group that meets Non-Compliant criteria via rules set up in AWS Config
 
 
 Create IAM Role to attach the remediation in AWS Config:
@@ -19,12 +19,12 @@ Create IAM Role to attach the remediation in AWS Config:
   ![Search IAM Searchbox](resources/IAMSearchIAM.png)
   ![Select Policies Options](resources/IAMClickonpolociesoptionphoto.png)
 ![IAM Create Policy Photo](resources/IAMCreatePolicyphoto.png)
- ![Click JSON Tab option](resources/IAM SelectJSONTab.png)
+ ![Click JSON Tab option](resources/IAMSelectJSONTab.png)
 ![Writing the JSON Policy.](resources/JSONpolicycodephoto.png)
-![Click Next After Creating JSON policy-editor photo](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png)
+![Click Next After Creating JSON policy editor](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png)
 ![Create Policy Final Photo ](resources/IAMCreatePolicyphoto.png)
 ![Selecty Roles from options](resources/ROLESSELECTROLESOPTIONS.png)
-![Click on Create Role (resources/ROLECREATEROLEINITIAL.png)
+![Click on Create Role](resources/ROLECREATEROLE.png)
 ![Select Use Case Screen for Role.](resources/ROLESSelectUseCaseandNextbuttonphoto.png)
   ![Add permissions for Role](resources/ROLESAddpermissions.png)
   ![Give Your Role a NAme.](resources/ROLEROLENAME.png)
