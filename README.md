@@ -2,7 +2,7 @@
 
 ## Full Step-by-Step guide with snapshots to describe and illustrate how AWS Config is set up with SNS text notifications.
 
-### This project will display how AWS Config is set up and how to have SNS notifications via text message get sent when an AWS Config rule is triggered.  In this project, we will be covering how to:
+### This project demonstrates how AWS Config is configured and how to set up SNS notifications via text message to be sent when an AWS Config rule is triggered.  In this project, we will be covering how to:
 * Configure AWS Config with preinstalled rules to record all changes and to proactively enforce security actions on newly created EC2 instances
 * Set up an SNS email notification to receive an email if and when an EC2 instance change takes place
   
@@ -25,8 +25,8 @@ Create IAM Role to attach the remediation in AWS Config:
   ![Create Policy Final Photo ](resources/IAMCreatePolicyphoto.png)
   ![Selecty Roles from options](resources/ROLESSELECTROLESOPTIONS.png)
   ![Click on Create Role](resources/ROLECREATEROLE.png)
-  ![Select Use Case Screen for Role.](resources/ROLESSelectUseCaseandNextbuttonphoto.png)
-  ![Add permissions for Role](resources/ROLESAddpermissions.png)
+  ![Select Use Case Screen for Role.](resources/IAM role Selected trusted entity and use case.png)
+  ![Add permissions for Role](resources/IAM ROLE PERMISSIONS POLICY ROOLE.png)
   ![Give Your Role a Name.](resources/ROLEROLENAME.png)
   ![Click Create Role Button Photo](resources/ROLECreaterolephoto.png)
   ![Copy the ARN for future use](resources/SelectActualARNphoto.png)
