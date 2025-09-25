@@ -13,6 +13,7 @@
 Create IAM Role to attach the remediation in AWS Config:
 
 *Search for IAM(in the top search box AWS)
+
 ![Search IAM Searchbox](resources/IAMSearchIAM.png)
 
 *Select Policies from the Left Hand Options
