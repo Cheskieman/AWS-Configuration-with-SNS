@@ -24,28 +24,51 @@ Create IAM Role to attach the remediation in AWS Config:
 
 ![IAM Create Policy Photo](resources/IAMCreatePolicyphoto.png)
 
+* Click on the JSON tab in the policy editor
+
+ ![Click JSON Tab option](resources/IAMSelectJSONTab.png)
+
+* Insert the code I illustrated( in below photo) and click Next 
+
+![Writing the JSON Policy.](resources/JSONpolicycodephoto.png)
+
+![Click Next After Creating JSON policy editor](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png) ![Click Next After Creating JSON policy editor](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png)
+
+Give your policy a name and click Create Policy
+
+![Give your IAM Policy a Name](IAMGiveNametoPolicy.png)
+
+![Create Policy Final ](resources/IAMCreatePolicyphoto.png)* Select Roles>
 
 
+*Select Create Role>
+
+![Click on Create Role](resources/ROLECREATEROLE.png)
 
 
+Select "Systems Manager" Use case and click Next> > 
+
+![Select Use Case Screen for Role.](resources/IAM role Selected trusted entity and use case.png)
 
 
-* Click on the JSON tab in the policy editor>Insert the code I illustrated( in above photos)  and click Next>Give your policy a name and Click Create Policy
-* Select Roles>Create Role> Select "Systems Manager" Use case and click Next> Search for and select the policy name that I gave in the previous step and click Next> Give your Role a name and click Create Role.
+Give your Role a name  
+
+![Give Your Role a Name.](resources/ROLEROLENAME.png)
+  
+ Click Create Role. 
+  
+![Click Create Role Button Photo](resources/ROLECreaterolephoto.png)
+
+* Search for and select the policy name that I gave in the previous step, and click Next
+
+![Add permissions for Role](resources/IAM ROLE PERMISSIONS POLICY ROOLE.png)
+
 * Click on the role that you just created and copy your ARN that is located in the summary. (We are going to need the ARN to setup a future part.)
  
+![Select Roles from options](resources/ROLESSELECTROLESOPTIONS.png)
   
-  ![Click JSON Tab option](resources/IAMSelectJSONTab.png)
-  ![Writing the JSON Policy.](resources/JSONpolicycodephoto.png)
-  ![Click Next After Creating JSON policy editor](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png)
-  ![Create Policy Final Photo ](resources/IAMCreatePolicyphoto.png)
-  ![Selecty Roles from options](resources/ROLESSELECTROLESOPTIONS.png)
-  ![Click on Create Role](resources/ROLECREATEROLE.png)
-  ![Select Use Case Screen for Role.](resources/IAM role Selected trusted entity and use case.png)
-  ![Add permissions for Role](resources/IAM ROLE PERMISSIONS POLICY ROOLE.png)
-  ![Give Your Role a Name.](resources/ROLEROLENAME.png)
-  ![Click Create Role Button Photo](resources/ROLECreaterolephoto.png)
-  ![Copy the ARN for future use](resources/SelectActualARNphoto.png)
+
+![Copy the ARN for future use](resources/SelectActualARNphoto.png)
 
  
         
@@ -100,4 +123,4 @@ It serves as a personal archive of my learning journey in applying foundational 
 Thank you for your understanding.
 
 
-
+    ![Another photo](resources/photo2.png)
