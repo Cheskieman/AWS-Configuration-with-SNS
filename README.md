@@ -26,7 +26,7 @@ Create IAM Role to attach the remediation in AWS Config:
 
 * Click on the JSON tab in the policy editor
 
- ![Click JSON Tab option](resources/IAMSelectJSONTab.png)
+![Click on JSON Tab](resources/IAM SelectJSONTab.png)
 
 * Insert the code I illustrated( in below photo)  
 
@@ -34,7 +34,7 @@ Create IAM Role to attach the remediation in AWS Config:
 
 *Click Next 
 
-![Click Next After Creating JSON policy editor](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png) 
+![Click Next JSON Create Policy](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png)
 
 
 Give your policy a name and click Create Policy
@@ -45,16 +45,17 @@ Give your policy a name and click Create Policy
 
 * Select Roles>
 
+![Select Roles Options](ROLESSELECTROLESOPTIONS.png)
 
 *Select Create Role>
 
-![Click on Create Role](resources/ROLECREATEROLE.png)
+![Select Initial Create Role](resources/ROLECREATEROLEINITIAL.png)
+
 
 
 Select "Systems Manager" Use case and click Next> > 
 
-![Select Use Case Screen for Role.](resources/IAM role Selected trusted entity and use case.png)
-
+![Select Trusted Entity and Use Case](resources/IAM rol Selected trusted entitiy and use case.png)
 
 Give your Role a name  
 
