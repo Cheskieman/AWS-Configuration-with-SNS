@@ -39,7 +39,7 @@ Give your policy a name and click Create Policy
 
 Select Roles
 
-<p align="center"> <img src="resources/CloickNEXTJSONCREATEPOLICYEDITOR.png" width="600"> </p>
+<p align="center"> <img src="resources/ROLESSELECTROLESOPTIONS.png" width="600"> </p>
 
 Select Create Role
 
@@ -47,7 +47,7 @@ Select Create Role
 
 Select "Systems Manager" Use case and click Next
 
-<p align="center"> <img src="resources/IAMrolSelectedtrustedentityandusecase.png" width="600"> </p>
+<p align="center"> <img src="resources/IAM rol Selected trusted entitiy and use case.png" width="600"> </p>
 
 Give your Role a name
 
@@ -59,7 +59,7 @@ Click Create Role
 
 Search for and select the policy name that you gave in the previous step, and click Next
 
-<p align="center"> <img src="resources/IAMROLEPERMISSIONSPOLICYROOLE.png" width="600"> </p>
+<p align="center"> <img src="resources/IAM ROLE PERMISSIONS POLICY ROOLE.png" width="600"> </p>
 
 Click on the role that you just created and copy your ARN from the summary (we’ll use this later).
 
@@ -77,7 +77,7 @@ Select Rules from the left-hand options
 From the Specify rule type page, type security group in the AWS Managed Rules search box.
 Select the option that begins with "Checks if security groups restrict incoming traffic to restricted ports..." and click Next.
 
-<p align="center"> <img src="resources/AWSConfigconfirmationRulesPageactualone.png" width="600"> </p>
+<p align="center"> <img src="AWS Config confirmation Rules Page actiual one.png" width="600"> </p>
 
 Type a name to give the newly created rule in the details section
 
