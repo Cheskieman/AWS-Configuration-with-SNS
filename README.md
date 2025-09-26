@@ -93,7 +93,7 @@ Click Next at the bottom of the page
 
 Select Save at the bottom of the Review and Create Page
 
-<p align="center"> <img src="resources/AWSCONFIGreviewandcreatesave.png" width="600"> </p>
+<p align="center"> <img src="resources/AWSCONFIGeview and createsave.png" width="600"> </p>
 
 Go back to the Rules Page and select the Rule that you just created
 
@@ -101,7 +101,7 @@ Go back to the Rules Page and select the Rule that you just created
 
 Click the Actions Button (top right) and select Manage Remediation
 
-<p align="center"> <img src="resources/AWSConfigSelectManageRemediationPhoto.png" width="600"> </p>
+<p align="center"> <img src="resources/AWS Config Select Manage Remediation Photo.png" width="600"> </p>
 
 On the Manage Remediation Page:
 
@@ -109,11 +109,11 @@ Select Automatic Remediation under "Select Remediation Method".
 
 Select AWS-DisablePublicAccessForSecurityGroup under "Remediation Action Details".
 
-<p align="center"> <img src="resources/AWSConfigurationSelectRemediationmethodandremediationactiondetailsphoto.png" width="600"> </p>
+<p align="center"> <img src="resources/AWSConfigurationSelectRemediationmethodand remediationactiondetailsphoto.png" width="600"> </p>
 
 Select Group ID from the "Resource ID parameter"
 
-<p align="center"> <img src="resources/ManageRemediationResourceIDparameter.png" width="600"> </p>
+<p align="center"> <img src="resources/ManageRemediationResourceID parameter.png" width="600"> </p>
 
 Paste the ARN (copied earlier) into "AutomationAssumeRole", then click Save Changes
 
@@ -146,7 +146,7 @@ Rule 2: Select All Traffic under type and Anywhere IPv4 under source
 
 Then select Create Security Group at the bottom
 
-<p align="center"> <img src="resources/SecurityGroupcreatesecurityinboundruleandCREATESECURITYGROUPBUTTONphoto.png" width="600"> </p>
+<p align="center"> <img src="resources/SecurityGroupcreatesecurityinboundruleandCREATESECURITYGROUPBUTOONphoto.png" width="600"> </p>
 Create an SNS email to receive notification when rules are triggered
 
 Select SNS (in the top search box)
@@ -163,11 +163,11 @@ Select Standard
 
 Give your topic a name in the Details section
 
-<p align="center"> <img src="resources/CreateTopicDetailsPageSelectedStandard.png" width="600"> </p>
+<p align="center"> <img src="topicdetailscreatetopicphoto.png" width="600"> </p>
 
 Select Create topic at the bottom
 
-<p align="center"> <img src="resources/SELECTCREATETOPICBUTTON.png" width="600"> </p>
+<p align="center"> <img src="resources/SELECTCREATETOPICBUTTON.photo.png" width="600"> </p>
 
 Navigate to Subscriptions → Create Subscription.
 
