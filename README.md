@@ -5,206 +5,185 @@
 ### This project demonstrates how AWS Config is configured and how to set up SNS notifications via text message to be sent when an AWS Config rule is triggered.  In this project, we will be covering how to:
 * Configure AWS Config with preinstalled rules to record all changes and to proactively enforce security actions on newly created EC2 instances
 * Set up an SNS email notification to receive an email if and when an EC2 instance change takes place
-  
 
-#### Instructions on how to Remediate a Security Group that meets Non-Compliant criteria via rules set up in AWS Config
-
-
+####Instructions on how to Remediate a Security Group that meets Non-Compliant criteria via rules set up in AWS Config
 Create IAM Role to attach the remediation in AWS Config:
 
-*Search for IAM(in the top search box AWS)
+Search for IAM (in the top search box AWS)
 
-![Search IAM Searchbox](resources/IAMSearchIAM.png)
+<p align="center"> <img src="resources/IAMSearchIAM.png" width="600"> </p>
 
-*Select Policies from the Left Hand Options
+Select Policies from the Left Hand Options
 
-![Select Policies Options](resources/IAMClickonpolociesoptionphoto.png)
+<p align="center"> <img src="resources/IAMClickonpolociesoptionphoto.png" width="600"> </p>
 
-*Select Create Policy 
+Select Create Policy
 
-![IAM Create Policy Photo](resources/IAMCreatePolicyphoto.png)
+<p align="center"> <img src="resources/IAMCreatePolicyphoto.png" width="600"> </p>
 
-* Click on the JSON tab in the policy editor
+Click on the JSON tab in the policy editor
 
-![Click on JSON Tab](resources/IAM SelectJSONTab.png)
+<p align="center"> <img src="resources/IAMSelectJSONTab.png" width="600"> </p>
 
-* Insert the code I illustrated( in below photo)  
+Insert the code I illustrated (in below photo)
 
-![Writing the JSON Policy.](resources/JSONpolicycodephoto.png)
+<p align="center"> <img src="resources/JSONpolicycodephoto.png" width="600"> </p>
 
-*Click Next 
+Click Next
 
-![Click Next JSON Create Policy](resources/ClickNEXTJSONCREATEPOLICYEDITOR.png)
-
+<p align="center"> <img src="resources/ClickNEXTJSONCREATEPOLICYEDITOR.png" width="600"> </p>
 
 Give your policy a name and click Create Policy
 
-![Give your IAM Policy a Name](IAMGiveNametoPolicy.png)
+<p align="center"> <img src="resources/IAMGiveNametoPolicy.png" width="600"> </p> <p align="center"> <img src="resources/IAMCreatePolicyphoto.png" width="600"> </p>
 
-![Create Policy Final ](resources/IAMCreatePolicyphoto.png)
+Select Roles
 
-* Select Roles>
+<p align="center"> <img src="resources/ROLESSELECTROLESOPTIONS.png" width="600"> </p>
 
-![Select Roles Options](ROLESSELECTROLESOPTIONS.png)
+Select Create Role
 
-*Select Create Role>
+<p align="center"> <img src="resources/ROLECREATEROLEINITIAL.png" width="600"> </p>
 
-![Select Initial Create Role](resources/ROLECREATEROLEINITIAL.png)
+Select "Systems Manager" Use case and click Next
 
+<p align="center"> <img src="resources/IAMrolSelectedtrustedentityandusecase.png" width="600"> </p>
 
+Give your Role a name
 
-Select "Systems Manager" Use case and click Next> > 
+<p align="center"> <img src="resources/ROLEROLENAME.png" width="600"> </p>
 
-![Select Trusted Entity and Use Case](resources/IAM rol Selected trusted entitiy and use case.png)
+Click Create Role
 
-Give your Role a name  
+<p align="center"> <img src="resources/ROLECreaterolephoto.png" width="600"> </p>
 
-![Give Your Role a Name.](resources/ROLEROLENAME.png)
-  
- Click Create Role. 
-  
-![Click Create Role Button Photo](resources/ROLECreaterolephoto.png)
+Search for and select the policy name that you gave in the previous step, and click Next
 
-* Search for and select the policy name that I gave in the previous step, and click Next
+<p align="center"> <img src="resources/IAMROLEPERMISSIONSPOLICYROOLE.png" width="600"> </p>
 
-![Add permissions for Role](resources/IAM ROLE PERMISSIONS POLICY ROOLE.png)
+Click on the role that you just created and copy your ARN from the summary (we’ll use this later).
 
-* Click on the role that you just created and copy your ARN that is located in the summary. (We are going to need the ARN to setup a future part.)
- 
-![Select Roles from options](resources/ROLESSELECTROLESOPTIONS.png)
-  
+<p align="center"> <img src="resources/SelectActualARNphoto.png" width="600"> </p>
+For AWS Config setup:
 
-![Copy the ARN for future use](resources/SelectActualARNphoto.png)
+Select AWS Config (in the top search box AWS)
 
- 
-        
-  For AWS Config setup:
-* Select AWS Config(in the top search box AWS)
+<p align="center"> <img src="resources/AWSCONFIGSEARCH.png" width="600"> </p>
 
-![Type AWS Config Searchbox](resources/AWSCONFIGSEARCH.png)
+Select Rules from the left-hand options
 
+<p align="center"> <img src="resources/ASWSCONFIGSELECTRULESOPTIONS.png" width="600"> </p>
 
- *Select Rules from the left-hand options
+From the Specify rule type page, type security group in the AWS Managed Rules search box.
+Select the option that begins with "Checks if security groups restrict incoming traffic to restricted ports..." and click Next.
 
- ![Select Rules from the options.](resources/ASWSCONFIGSELECTRULESOPTIONS.png)
+<p align="center"> <img src="resources/AWSConfigconfirmationRulesPageactualone.png" width="600"> </p>
 
+Type a name to give the newly created rule in the details section
 
-*From the Specify rule type page type security group in the AWS Managed Rules search box and select the option that begins with Decription = Checks if security groups restrict incoming traffic to restricted ports............. >Select the option that appears and click Next.
+<p align="center"> <img src="resources/AWSCONFIGRULESDETAILSGIVENAME.png" width="600"> </p>
 
-![Search for specific rule](resources/AWS Config confirmation Rules Page actual one.png)
+Set Frequency to 1 hour in Evaluation Mode. Click Next near the bottom.
 
+<p align="center"> <img src="resources/AWSCongfigurationRulesEditRuleFrequencyPage.png" width="600"> </p>
 
-![AWS Config Specify Rule Type Page & Select AWS Managed Rule](resources/AWS Config confirmation Rules Page actual one.png)
- 
+Click Next at the bottom of the page
 
- * Type a name to give the newly created rule in the details section
+<p align="center"> <img src="resources/AWSConfigConfigrulenext.png" width="600"> </p>
 
+Select Save at the bottom of the Review and Create Page
 
-![Type name for newly created rule](resources/AWSCONFIGRULESDETAILSGIVENAME.png)
-   
-*Set Frequencey to 1 hour in Evaluation Mode. Click Next Near the bottom.
+<p align="center"> <img src="resources/AWSCONFIGreviewandcreatesave.png" width="600"> </p>
 
+Go back to the Rules Page and select the Rule that you just created
 
-![Change Frequencey Recording Mode to 1 hour](resources/AWSCongfigurationRulesEditRuleFrequencyPage.png)
+<p align="center"> <img src="resources/AWSCONFIGSELECTRULE.png" width="600"> </p>
 
-* Click next at the bottom of the page
+Click the Actions Button (top right) and select Manage Remediation
 
- 
- ![Click Next Bottom of Page](resources/AWSConfigConfigrulenext.png)
+<p align="center"> <img src="resources/AWSConfigSelectManageRemediationPhoto.png" width="600"> </p>
 
+On the Manage Remediation Page:
 
-* Select Save at the bottom of the Review and Create Page. 
+Select Automatic Remediation under "Select Remediation Method".
 
+Select AWS-DisablePublicAccessForSecurityGroup under "Remediation Action Details".
 
-![Click Save at the bottom of Review and Create Page.](resources/AWSCONFIGeview and createsave.png)
+<p align="center"> <img src="resources/AWSConfigurationSelectRemediationmethodandremediationactiondetailsphoto.png" width="600"> </p>
 
-*  Go back to the Rules Page and select the Rule that You Just Created(Select circle to left of the crossed-out name.)
+Select Group ID from the "Resource ID parameter"
 
-*  ![Select the rule](resources/AWSCONFIGSELECTRULE.png)
+<p align="center"> <img src="resources/ManageRemediationResourceIDparameter.png" width="600"> </p>
 
-*  Click the Actions Button in the top Right Corner and select Manage Remediation
+Paste the ARN (copied earlier) into "AutomationAssumeRole", then click Save Changes
 
-  ![AWS Config Select Manage Remediation](resources/AWS Config Select Manage Remediation Photo.png)
-
-*  On the Manage Remediation Page, Select Automatic Remediation under "Select Remediation Method." Select AWS-DisablePublicAccessForSecurityGroup under "Remediation Action Details."
-
-* ![Select Proper Remediation Method & Action Details](resources/AWSConfigurationSelectRemediationmethodand remediationactiondetailsphoto.png)
-
-*  Select Group ID from the "Resource ID parameter">
-*
-* ![SelectResource ID parameter](resources/ManageRemediationResourceID parameter.png)
-
-
-*  Paste the ARN (Copied from Earlier) in the box to the right of "AutomationAssumeRole", then click Save Changes.
-
-
-![Select Copied ARN into Parmeters](resources/ManageRemediationBacktopagepasteinparameterARNphoto.png)
-
-
-
-
-
-
-
-
-
-
-
+<p align="center"> <img src="resources/ManageRemediationBacktopagepasteinparameterARNphoto.png" width="600"> </p>
 Create the Security Groups for the AWS Configurations
 
-*Search for and select EC2 (in the top searchbox AWS)
+Search for and select EC2 (in the top search box)
+
+<p align="center"> <img src="resources/EC2SELECTFORSECURITYGROUP.png" width="600"> </p>
+
+Select Security Group from the left options bar
+
+<p align="center"> <img src="resources/SECURITYGROUPSELECTSECURITYGROUPFROMOPTIONS.png" width="600"> </p>
+
+Select the Create Security Group tab
+
+<p align="center"> <img src="resources/SECURITYGROUPSELECTSECURITYGROUPFROMOPTIONS.png" width="600"> </p>
+
+On the Create Security Groups Page:
+
+Give your Security Group a name and description under Basic Details
+
+Create 2 rules in the Inbound rules box
+
+<p align="center"> <img src="resources/SecurityGroupcreatesecuritygroupbasicdetailsphoto.png" width="600"> </p>
+
+Rule 1: Select SSH under type and Anywhere IPv4 under source
+
+Rule 2: Select All Traffic under type and Anywhere IPv4 under source
+
+Then select Create Security Group at the bottom
+
+<p align="center"> <img src="resources/SecurityGroupcreatesecurityinboundruleandCREATESECURITYGROUPBUTTONphoto.png" width="600"> </p>
+Create an SNS email to receive notification when rules are triggered
+
+Select SNS (in the top search box)
+
+<p align="center"> <img src="resources/SNSSearchSNS.png" width="600"> </p>
+
+Select Topic from the left-hand options, then Create Topic
+
+<p align="center"> <img src="resources/SNSSelecttopicandcreatetopic.png" width="600"> </p>
+
+On the Create Topic page:
+
+Select Standard
+
+Give your topic a name in the Details section
+
+<p align="center"> <img src="resources/CreateTopicDetailsPageSelectedStandard.png" width="600"> </p>
+
+Select Create topic at the bottom
+
+<p align="center"> <img src="resources/SELECTCREATETOPICBUTTON.png" width="600"> </p>
+
+Navigate to Subscriptions → Create Subscription.
+
+Select your Topic ARN from the dropdown
+
+Choose Email as the protocol
+
+Enter the desired notification email in the Endpoint field
+
+<p align="center"> <img src="resources/SNSCreateSubscriptioninfopage.png" width="600"> </p>
+
+Click Create Subscription
+
+<p align="center"> <img src="resources/SNSCreateSubscriptionSelectphoto.png" width="600"> </p>
 
 
-![Search for and Select EC2 ](resources/EC2SELECTFORSECURITYGROUP.png)
-
-
-*Select Security Group from the left options bar
-
- ![Select Security Group from EC2 options](resources/SECURITYGROUPSELECTSECURITYGROUPFROMOPTIONS.png)
-
-
-Select the Create Security Group Tab
-
-
-![Select Create Security Group to Intialize Security Group Creation ](resources/SECURITYGROUPSELECTSECURITYGROUPFROMOPTIONS.png)
-
-
-
-On the Create Security Groups Page, give your Security Group a name and a Description under in the "Basic Details Box">  Create 2 rules in the Inbound rules box> 
-
-![EC2 Create Security Groups Give Your Security Group a Name](resources/SecurityGroupcreatesecuritygroupbasicdetailsphoto.pngresources/SecurityGroupcreatesecuritygroupbasicdetailsphoto.png)
-
-Rule 1) Select SSH under type and Anywhere IPV4 under Source  
-Rule 2) Select All Traffic under type and Anywhere IPV4 under Source then select Create Security Group on the bottom 
-
-![EC2 Create Security Group Set Up Security Group Rules and Select Create Security Group Tab](resources/SecurityGroupcreatesecurityinboundruleandCREATESECURITYGROUPBUTOONphoto.png)
-
-
-Create an SNS email to receive an email notification when the above rule(s) are triggered:
-
-* Select SNS(in the top search box)
-
-![Search SNS from AWS Searchbox](resources/SNSSearchSNS.png)
-* Select Topic from the left-hand options, followed by Create Topic>
-
-![SNS Select Topic & Create Topic Tab](resources/SNSSelecttopicandcreatetopic.png)
-
-* On the Create Topic page, Select Standard and give your topic a name in the "Details" Section.
-
-  ![Enter Details Part Create Topic Page](resources/Create Topic Details Page Selected Standard.png)
-
-* Select Create topic at the bottom.
-
-
- ![Select Create Topic Button at bottom of page.](resources/SELECTCREATETOPICBUTTON.photo.png)
-
-* Navigate to Subscriptions > Create Subscription. In the Create Subscription form, select the previously created Topic ARN from the dropdown, choose Email as the protocol, enter the desired notification email address in the Endpoint field,
-
-* ![SNS Create Subscription Page Choose Topic ARN, Endpoint and Select Create Subscription Tab](resources/SNSCreateSubscriptioninfopage.png)
-
-* Click Create Subscription.
-
-![SNS Select Create Subscription](resources/SNSCreateSubscriptionSelectphoto.png)
 
 
 ##### Contribution Policy
