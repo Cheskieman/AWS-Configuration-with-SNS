@@ -79,22 +79,71 @@ Give your Role a name
  
         
   For AWS Config setup:
-* Select AWS Config(in the top search box AWS)> Select Rules from the options> From the Specify rule type page type security group in the AWS Managed Rules search box and select the option that begins with Decription = Checks if security groups restrict incoming traffic to restricted ports............. Select the option that appears and click Next.> Set Frequencey to 1 hour in Evaluation Mode.Click Next Near bottom.
-*  Go back to the Rules Page and select the Rule that You Just Created> Click the Actions Button in the top Right Corner and select Manage Remediation
-*  On the Manage Remediation Page, Select Automatic Remediation under "Select Remediation Method." Select AWS-DisablePublicAccessForSecurityGroup under "Remediation Action Details." Select Group ID from the "Resource ID parameter"> Paste the ARN (Copied from Earlier) in the box to the right of "AutomationAssumeRole", then click Save Changes.
+* Select AWS Config(in the top search box AWS)
 
 ![Type AWS Config Searchbox](resources/AWSCONFIGSEARCH.png)
-![Another photo](resources/photo2.png)
+
+
+ *Select Rules from the left-hand options
+
+ ![Select Rules from the options.](resources/ASWSCONFIGSELECTRULESOPTIONS.png)
+
+
+*From the Specify rule type page type security group in the AWS Managed Rules search box and select the option that begins with Decription = Checks if security groups restrict incoming traffic to restricted ports............. >Select the option that appears and click Next.
+
 ![Search for specific rule](resources/AWS Config confirmation Rules Page actual one.png)
+
+
 ![AWS Config Specify Rule Type Page & Select AWS Managed Rule](resources/AWS Config confirmation Rules Page actual one.png)
-![Set Recording Method and Frequency AWS Config](resources/AWS CONFIG RECORDING Setting PAGE.png)
+ 
+
+ * Type a name to give the newly created rule in the details section
+
+
+![Type name for newly created rule](resources/AWSCONFIGRULESDETAILSGIVENAME.png)
+   
+*Set Frequencey to 1 hour in Evaluation Mode. Click Next Near the bottom.
+
+
 ![Change Frequencey Recording Mode to 1 hour](resources/AWSCongfigurationRulesEditRuleFrequencyPage.png)
-![Click Next Bottom of Page](resources/AWSConfigConfigrulenext.png)
-![Click Save at bottom of Next Page](resources/AWSCONFIGeview and createsave.png)
-![AWS Config Select Manage Remediation](resources/AWS Config Select Manage Remediation Photo.png)
-![Select Proper Remediation Method & Action Details](resources/AWSConfigurationSelectRemediationmethodand remediationactiondetailsphoto.png)
-![SelectResource ID parameter](resources/ManageRemediationResourceID parameter.png)
+
+* Click next at the bottom of the page
+
+ 
+ ![Click Next Bottom of Page](resources/AWSConfigConfigrulenext.png)
+
+
+* Select Save at the bottom of the Review and Create Page. 
+
+
+![Click Save at the bottom of Review and Create Page.](resources/AWSCONFIGeview and createsave.png)
+
+*  Go back to the Rules Page and select the Rule that You Just Created(Select circle to left of the crossed-out name.)
+
+*  ![Select the rule](resources/AWSCONFIGSELECTRULE.png)
+
+*  Click the Actions Button in the top Right Corner and select Manage Remediation
+
+  ![AWS Config Select Manage Remediation](resources/AWS Config Select Manage Remediation Photo.png)
+
+*  On the Manage Remediation Page, Select Automatic Remediation under "Select Remediation Method." Select AWS-DisablePublicAccessForSecurityGroup under "Remediation Action Details."
+
+* ![Select Proper Remediation Method & Action Details](resources/AWSConfigurationSelectRemediationmethodand remediationactiondetailsphoto.png)
+
+*  Select Group ID from the "Resource ID parameter">
+*
+* ![SelectResource ID parameter](resources/ManageRemediationResourceID parameter.png)
+
+
+*  Paste the ARN (Copied from Earlier) in the box to the right of "AutomationAssumeRole", then click Save Changes.
+
+
 ![Select Copied ARN into Parmeters](resources/ManageRemediationBacktopagepasteinparameterARNphoto.png)
+
+
+
+
+
 
 
 
@@ -103,8 +152,31 @@ Give your Role a name
 
 Create the Security Groups for the AWS Configurations
 
-*Select EC2 (in the top searchbox AWS) Select Security Group from left options followed by selecting Create Security Group Tab> On the Create Security Groups Page give your Security Group a name and a Description under  in the "Basic Details Box">  Create 2 rules in the Inbound rules box> Rule 1) Select SSH under type and Anywhere IPV4 under Source  Rule 2) Select All Traffic under type and Anywhere IPV4 under Source then select Create Security Group on the bottom 
+*Search for and select EC2 (in the top searchbox AWS)
+
+
+![Search for and Select EC2 ](resources/EC2SELECTFORSECURITYGROUP.png)
+
+
+*Select Security Group from the left options bar
+
+ ![Select Security Group from EC2 options](resources/SECURITYGROUPSELECTSECURITYGROUPFROMOPTIONS.png)
+
+
+Select the Create Security Group Tab
+
+
+![Select Create Security Group to Intialize Security Group Creation ](resources/SECURITYGROUPSELECTSECURITYGROUPFROMOPTIONS.png)
+
+
+
+On the Create Security Groups Page, give your Security Group a name and a Description under in the "Basic Details Box">  Create 2 rules in the Inbound rules box> 
+
 ![EC2 Create Security Groups Give Your Security Group a Name](resources/SecurityGroupcreatesecuritygroupbasicdetailsphoto.pngresources/SecurityGroupcreatesecuritygroupbasicdetailsphoto.png)
+
+Rule 1) Select SSH under type and Anywhere IPV4 under Source  
+Rule 2) Select All Traffic under type and Anywhere IPV4 under Source then select Create Security Group on the bottom 
+
 ![EC2 Create Security Group Set Up Security Group Rules and Select Create Security Group Tab](resources/SecurityGroupcreatesecurityinboundruleandCREATESECURITYGROUPBUTOONphoto.png)
 
 
