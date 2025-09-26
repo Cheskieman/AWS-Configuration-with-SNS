@@ -31,7 +31,7 @@ Insert the code I illustrated (in below photo)
 
 Click Next
 
-<p align="center"> <img src="resources/ClickNEXTJSONCREATEPOLICYEDITOR.png" width="600"> </p>
+<p align="center"> <img src="resources/CloickNEXTJSONCREATEPOLICYEDITOR.png" width="600"> </p>
 
 Give your policy a name and click Create Policy
 
