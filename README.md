@@ -183,12 +183,27 @@ Rule 2) Select All Traffic under type and Anywhere IPV4 under Source then select
 Create an SNS email to receive an email notification when the above rule(s) are triggered:
 
 * Select SNS(in the top search box)
-* Select Topic from the options> On the Create Topic page, Select Standard and give your topic a name in the "Details" Section, then select Create topic at the bottom.
-* Navigate to Subscriptions > Create Subscription. In the Create Subscription form, select the previously created Topic ARN from the dropdown, choose Email as the protocol, enter the desired notification email address in the Endpoint field, and click Create Subscription.
+
 ![Search SNS from AWS Searchbox](resources/SNSSearchSNS.png)
-![SNS Select Create Topic Tab](resources/SNSSelecttopicandcreatetopic.png)
-![Enter Details Part Create Topic Page](resources/topicdetailscreatetopicphoto.png)
-![SNS Create Subscription Page Choose Topic ARN, Endpoint and Select Create Subscription Tab](resources/SNSCreateSubscriptioninfopage.png)
+* Select Topic from the left-hand options, followed by Create Topic>
+
+![SNS Select Topic & Create Topic Tab](resources/SNSSelecttopicandcreatetopic.png)
+
+* On the Create Topic page, Select Standard and give your topic a name in the "Details" Section.
+
+  ![Enter Details Part Create Topic Page](resources/Create Topic Details Page Selected Standard.png)
+
+* Select Create topic at the bottom.
+
+
+ ![Select Create Topic Button at bottom of page.](resources/SELECTCREATETOPICBUTTON.photo.png)
+
+* Navigate to Subscriptions > Create Subscription. In the Create Subscription form, select the previously created Topic ARN from the dropdown, choose Email as the protocol, enter the desired notification email address in the Endpoint field,
+
+* ![SNS Create Subscription Page Choose Topic ARN, Endpoint and Select Create Subscription Tab](resources/SNSCreateSubscriptioninfopage.png)
+
+* Click Create Subscription.
+
 ![SNS Select Create Subscription](resources/SNSCreateSubscriptionSelectphoto.png)
 
 
