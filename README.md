@@ -23,7 +23,7 @@ Select Create Policy
 
 Click on the JSON tab in the policy editor
 
-<p align="center"> <img src="resources/IAMSelectJSONTab.png" width="600"> </p>
+<p align="center"> <img src="resources/IAM SelectJSONTab.png" width="600"> </p>
 
 Insert the code I illustrated (in below photo)
 
