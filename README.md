@@ -181,7 +181,7 @@ Enter the desired notification email in the Endpoint field
 
 Click Create Subscription
 
-<p align="center"> <img src="resources/SNSCreateSubscriptionSelectphoto.png" width="600"> </p>
+
 
 
 
@@ -195,4 +195,4 @@ It serves as a personal archive of my learning journey in applying foundational 
 Thank you for your understanding.
 
 
-    ![Another photo](resources/photo2.png)
+    
