@@ -39,7 +39,7 @@ Give your policy a name and click Create Policy
 
 Select Roles
 
-<p align="center"> <img src="resources/ROLESSELECTROLESOPTIONS.png" width="600"> </p>
+<p align="center"> <img src="resources/CloickNEXTJSONCREATEPOLICYEDITOR.png" width="600"> </p>
 
 Select Create Role
 
